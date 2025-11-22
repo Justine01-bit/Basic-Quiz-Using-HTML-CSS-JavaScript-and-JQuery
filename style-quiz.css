@@ -1,0 +1,156 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #e0f7fa, #f0f4f8);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.quiz-container {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-height: 80vh;
+  position: relative;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #007bff;
+}
+
+#cards-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+}
+
+.flashcard {
+  background: #00bcd4;
+  color: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease, transform 0.3s ease;
+  height: 100px;
+  width: 120px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.flashcard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.flashcard.blur {
+  filter: blur(3px);
+  opacity: 0.5;
+}
+
+.flashcard.answered {
+  background: #28a745;
+}
+
+.quiz-question {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
+
+.quiz-options label {
+  display: block;
+  margin: 8px 0;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #f1f1f1;
+  transition: background 0.2s ease;
+}
+
+.quiz-options label:hover {
+  background: #e0f7fa;
+}
+
+#nextBtn {
+  padding: 12px 30px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  align-self: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#nextBtn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #28a745;
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #f0f4f8;
+  padding: 5px 0;
+  text-align: center;
+  z-index: 1000;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Home button centered below flashcards */
+.home-btn {
+  display: block;
+  margin: 30px auto 0 auto;
+  padding: 14px 30px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: fit-content;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.home-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
